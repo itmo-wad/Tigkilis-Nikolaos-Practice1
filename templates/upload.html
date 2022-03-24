@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Show File-select Fields</h1>
+{% for mesg in get_flashed_messages() %}
+<h4>{{ mesg }}</h4>
+{% endfor %}
+<h3>Select file for upload:</h3>
+<form action="http://localhost:5000/upload"  method="post" enctype="multipart/form-data">
+  <label for="fileimage">Select a file:</label>
+  <input type="file" id="file" name="file"><br><br>
+  <input type="submit" value=Upload>
+</form>
+</body>
+</html>
